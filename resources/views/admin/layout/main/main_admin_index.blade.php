@@ -1,0 +1,5 @@
+@include('admin.layout.header.header_link')
+@include('admin.layout.header.header')
+@yield('content')
+@include('admin.layout.footer.footer_link')
+@include('admin.layout.footer.footer')

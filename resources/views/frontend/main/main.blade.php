@@ -1,0 +1,5 @@
+@include('frontend.header.header_link')
+@include('frontend.header.header')
+@yield('content')
+@include('frontend.footer.footer')
+@include('frontend.footer.footer_link')
