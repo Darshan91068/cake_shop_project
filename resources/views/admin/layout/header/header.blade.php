@@ -274,6 +274,21 @@
                             </li>
                         </ul>
                     </div>
+                   
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#order" aria-expanded="false"
+                        aria-controls="forms">
+                        <span class="menu-title">Order</span>
+                        <i class="fab fa-pinterest-square menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="order">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.order') }}">Orders</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 {{-- <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#forms" aria-expanded="false"

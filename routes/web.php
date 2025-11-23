@@ -19,6 +19,8 @@ use App\Http\Controllers\frontend\orderController;
 use App\Http\Controllers\frontend\productDetailController;
 use App\Http\Controllers\frontend\showCartProductController;
 use App\Http\Middleware\CartRedirectIfNotAuthenticated;
+use App\Http\Controllers\admin\orderController as AdminOrderShow;
+// C:\xammp82\htdocs\laravel_cake_shop\app\Http\Controllers\admin\orderController.php
 
 Route::get('/', function () {
     return view('frontend.index');
@@ -136,4 +138,7 @@ Route::middleware(ValidUser::class)->group(function () {
     // contact
     Route::get('/admin/manage_contact', [manage_ContactController::class, 'contact_list'])->name('admin.manage_contact');
     Route::delete('/admin/contact/{delete_id}', [manage_ContactController::class, 'destroy'])->name('admin.contact.delete');
+    Route::get('/admin/order', [AdminOrderShow::class, 'product_list'])->name('admin.order');
+    Route::get('/admin/order-show', [AdminOrderShow::class, 'order_list'])->name('admin.order-show');
+
 });

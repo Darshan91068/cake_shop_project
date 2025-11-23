@@ -23,8 +23,4 @@ class Order extends Model
         'main_total'
     ];
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 }

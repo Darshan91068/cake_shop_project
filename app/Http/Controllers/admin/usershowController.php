@@ -13,7 +13,7 @@ class usershowController extends Controller
     public function user_list(Request $request)
     {
         if ($request->ajax()) {
-            $users = User::select(['id', 'username', 'email', 'phone_number', 'address', 'gender', 'image', 'created_at']);
+            $users = User::select(['id', 'username', 'email','created_at']);
 
             return DataTables::of($users)
                 ->addColumn('action', function ($user) {
@@ -26,7 +26,7 @@ class usershowController extends Controller
                 })
                 ->editColumn('image', function ($user) {
                     // Generate full image URL
-                    if ($user->image && file_exists(public_path('storage/' . $user->image))) {
+                    if ($user->image && file_exists(public_path('storage/' . $user->profile_image))) {
                         $imageUrl = asset('storage/' . $user->image);
                         return '<img src="' . $imageUrl . '" class="img-thumbnail" alt="User Image" width="50">';
                     }

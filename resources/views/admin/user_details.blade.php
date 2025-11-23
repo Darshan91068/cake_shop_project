@@ -22,10 +22,10 @@
                                         <th>ID</th>
                                         <th>Username</th>
                                         <th>Email</th>
-                                        <th>Phone Number</th>
-                                        <th>Address</th>
-                                        <th>Gender</th>
-                                        <th>Image</th>
+                                        {{-- <th>Phone Number</th> --}}
+                                        {{-- <th>Address</th>
+                                        <th>Gender</th> --}}
+                                        {{-- <th>Profile Image</th> --}}
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -67,26 +67,26 @@
                         data: 'email',
                         name: 'email'
                     },
-                    {
-                        data: 'phone_number',
-                        name: 'phone_number'
-                    },
-                    {
-                        data: 'address',
-                        name: 'address'
-                    },
-                    {
-                        data: 'gender',
-                        name: 'gender'
-                    },
-                    {
-                        data: 'image',
-                        name: 'image',
-                        render: function(data) {
-                            return data
+                    // {
+                    //     data: 'phone_number',
+                    //     name: 'phone_number'
+                    // },
+                    // {
+                    //     data: 'address',
+                    //     name: 'address'
+                    // },
+                    // {
+                    //     data: 'gender',
+                    //     name: 'gender'
+                    // },
+                    // {
+                    //     data: 'profile_image',
+                    //     name: 'profile_image',
+                    //     render: function(data) {
+                    //         return data
 
-                        }
-                    },
+                    //     }
+                    // },
                     {
                         data: 'action',
                         name: 'action',
